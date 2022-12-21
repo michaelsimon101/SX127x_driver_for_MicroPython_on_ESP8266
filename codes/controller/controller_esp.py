@@ -6,14 +6,14 @@ import controller
 
 class Controller(controller.Controller):
     # LoRa config
-    PIN_ID_FOR_LORA_RESET = 4
+    PIN_ID_FOR_LORA_RESET = 14
 
-    PIN_ID_FOR_LORA_SS = 15
-    PIN_ID_SCK = 14
-    PIN_ID_MOSI = 13
-    PIN_ID_MISO = 12
+    PIN_ID_FOR_LORA_SS = 18
+    PIN_ID_SCK = 5
+    PIN_ID_MOSI = 27
+    PIN_ID_MISO = 19
 
-    PIN_ID_FOR_LORA_DIO0 = 5
+    PIN_ID_FOR_LORA_DIO0 = 26
     PIN_ID_FOR_LORA_DIO1 = None
     PIN_ID_FOR_LORA_DIO2 = None
     PIN_ID_FOR_LORA_DIO3 = None
@@ -27,7 +27,7 @@ class Controller(controller.Controller):
         GPIO_PINS = (0, 1, 2, 3, 4, 5, 12, 13, 14, 15, 16)
 
     if config_lora.IS_ESP32:
-        ON_BOARD_LED_PIN_NO = 2
+        ON_BOARD_LED_PIN_NO = 25
         ON_BOARD_LED_HIGH_IS_ON = True
         GPIO_PINS = (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11,
                      12, 13, 14, 15, 16, 17, 18, 19, 21, 22,
