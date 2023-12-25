@@ -5,7 +5,7 @@ import display_ssd1306_i2c
 class Controller(controller_esp.Controller, display_ssd1306_i2c.Display):
 
     # LoRa config
-    PIN_ID_FOR_LORA_RESET = 23
+    PIN_ID_FOR_LORA_RESET = 14
     
     PIN_ID_FOR_LORA_SS = 18
     PIN_ID_SCK = 5
@@ -21,9 +21,9 @@ class Controller(controller_esp.Controller, display_ssd1306_i2c.Display):
     
     
     # OLED config
-    PIN_ID_FOR_OLED_RESET = NONE
-    PIN_ID_SDA = 21
-    PIN_ID_SCL = 22
+    PIN_ID_FOR_OLED_RESET = 16
+    PIN_ID_SDA = 4
+    PIN_ID_SCL = 15
     OLED_I2C_ADDR = 0x3C    
     OLED_I2C_FREQ = 400000
     OLED_WIDTH = 128

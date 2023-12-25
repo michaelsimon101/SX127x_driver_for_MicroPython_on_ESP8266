@@ -28,7 +28,8 @@ if IS_MICROPYTHON:
     if IS_ESP32:
         NODE_NAME = 'ESP32_'        
         import esp
-        IS_TTGO_LORA_OLED = (esp.flash_size() > 5000000)
+        IS_TTGO_LORA_OLED = (os.uname().machine == 'LILYGO TTGO LoRa32 with ESP32')
+        IS_HELTEC_LORA_OLED = (os.uname().machine == 'Heltec Lora32 V2.1 with ESP32')
         
     NODE_EUI = mac2eui(uuid)
     NODE_NAME = NODE_NAME + uuid
@@ -41,6 +42,9 @@ if IS_MICROPYTHON:
     if IS_TTGO_LORA_OLED:
         from controller_esp_ttgo_lora_oled import Controller
         SOFT_SPI = True
+    if IS_HELTEC_LORA_OLED:
+        from controller_esp_heltec_lora_oled import Controller
+        SOFT_SPI = False
     else:
         from controller_esp import Controller
     

@@ -116,10 +116,11 @@ class Controller:
             
 
     def reset_pin(self, pin, duration_low = 0.05, duration_high = 0.05):
-        pin.low()
-        sleep(duration_low)
-        pin.high()
-        sleep(duration_high)
+        if pin is not None:
+            pin.low()
+            sleep(duration_low)
+            pin.high()
+            sleep(duration_high)
         
         
     def __exit__(self): 

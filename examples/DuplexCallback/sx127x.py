@@ -93,8 +93,8 @@ class SX127x:
             
         # check version
         version = self.readRegister(REG_VERSION)
-        if version != 0x12:
-            raise Exception('Invalid version.')
+        #### mike ####if version != 0x12:
+        #### mike ####    raise Exception('Invalid version.')
             
         
         # put in LoRa and sleep mode
