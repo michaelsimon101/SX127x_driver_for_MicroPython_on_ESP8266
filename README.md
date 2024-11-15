@@ -12,4 +12,5 @@
 -  install notepad++
 -  flash micropython to device
 -  get COMX Port
--  open 
+-  open notebooks/tools/ipynb file
+-  have FUN
